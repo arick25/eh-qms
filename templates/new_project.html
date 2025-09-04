@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Project | EH MetalWorks QMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>➕ Add New Project</h1>
+    <form method="POST">
+        <label>Customer Name:</label><br>
+        <input type="text" name="customer"><br><br>
+
+        <label>Quoted Price:</label><br>
+        <input type="text" name="quoted_price"><br><br>
+
+        <label>Estimated Time:</label><br>
+        <input type="text" name="estimated_time"><br><br>
+
+        <label>Actual Time:</label><br>
+        <input type="text" name="actual_time"><br><br>
+
+        <label>Start Date:</label><br>
+        <input type="date" name="start_date"><br><br>
+
+        <label>End Date:</label><br>
+        <input type="date" name="end_date"><br><br>
+
+        <label>Final Situation Report:</label><br>
+        <textarea name="final_report"></textarea><br><br>
+
+        <input type="submit" value="Save Project">
+    </form>
+    <p><a href="/projects">← Back to Projects</a></p>
+</body>
+</html>

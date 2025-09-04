@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projects | EH MetalWorks QMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <img src="/static/ehlogo.png" alt="EH MetalWorks Logo" style="max-width:300px; margin-bottom:20px; display:block; margin:auto;">
+    <h1>📁 Project Tracker</h1>
+    <p><a href="/project/new">Add New Project</a></p>
+    <ul>
+        {% for p in projects %}
+        <li>
+            <strong>{{ p.customer }}</strong> — Quoted: {{ p.quoted_price }}<br>
+            Estimated Time: {{ p.estimated_time }} | Actual Time: {{ p.actual_time }}<br>
+            Start: {{ p.start_date }} | End: {{ p.end_date }}<br>
+            Final Report: {{ p.final_report }}
+        </li>
+        {% else %}
+        <li>No projects recorded yet.</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/">← Back to Dashboard</a></p>
+</body>
+</html>

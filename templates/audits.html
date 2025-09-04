@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audit Tracker | EH MetalWorks QMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>🔍 Audit Tracker</h1>
+    <p><a href="/audit/new">Log New Audit</a></p>
+    <ul>
+        {% for a in audits %}
+        <li>
+            <strong>{{ a.area }}</strong> — Auditor: {{ a.auditor }}<br>
+            Findings: {{ a.findings }}<br>
+            Corrective Action: {{ a.corrective_action }}<br>
+            Status: {{ a.status }}
+        </li>
+        {% else %}
+        <li>No audits logged yet.</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/">← Back to Dashboard</a></p>
+</body>
+</html>

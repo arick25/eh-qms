@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard | EH MetalWorks QMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <img src="/static/ehlogo.png" alt="EH MetalWorks Logo" style="max-width: 300px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;">
+    <h1>🌸 QMS Dashboard</h1>
+    <p>
+        <a href="/projects">📁 Projects</a>  |
+        <a href="/upload">📤 Upload Document</a> |
+        <a href="/audits">🔍 View Audits</a> |
+        <a href="/capa">🛠 View CAPAs</a> |
+        <a href="/inventory">📦 Inventory</a>
+        <a href="/kpi">📊 KPI Report</a> |
+        <a href="/employees">👥 Employees</a> |  
+        <a href="/logout">🚪 Logout</a>
+    </p>
+    <h2>Uploaded Documents</h2>
+    <ul>
+        {% for doc in documents %}
+        <li>{{ doc.title }} — Version: {{ doc.version }} — Owner: {{ doc.owner }}</li>
+        {% else %}
+        <li>No documents uploaded yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees | EH MetalWorks QMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <img src="/static/ehlogo.png" alt="EH MetalWorks Logo" style="max-width:300px; margin-bottom:20px; display:block; margin:auto;">
+    <h1>👥 Employee Directory</h1>
+    <p><a href="/employee/new">Add New Employee</a></p>
+    <ul>
+        {% for e in employees %}
+        <li>
+            <strong>{{ e.name }}</strong> — {{ e.title }} ({{ e.department }})<br>
+            Status: {{ e.status }}<br>
+            Pay Rate: {{ e.pay_rate }}<br>
+            Hire Date: {{ e.hire_date }}<br>
+            Contact: {{ e.contact }}
+        </li>
+        {% else %}
+        <li>No employees recorded yet.</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/">← Back to Dashboard</a></p>
+</body>
+</html>

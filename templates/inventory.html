@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory | EH MetalWorks QMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <img src="/static/ehlogo.png" alt="EH MetalWorks Logo" style="max-width:300px; margin-bottom:20px; display:block; margin:auto;">
+    <h1>📦 Material Inventory</h1>
+    <p><a href="/inventory/new">Add New Material</a></p>
+    <ul>
+        {% for m in materials %}
+        <li>
+            <strong>{{ m.type }}</strong> — Gauge: {{ m.gauge }} — Thickness: {{ m.thickness }}<br>
+            Size: {{ m.length }} × {{ m.width }}<br>
+            Quantity: {{ m.quantity }}
+        </li>
+        {% else %}
+        <li>No materials logged yet.</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/">← Back to Dashboard</a></p>
+</body>
+</html>

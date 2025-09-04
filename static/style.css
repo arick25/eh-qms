@@ -1,0 +1,77 @@
+/* Import a clean, professional font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+    background-color: #ffe6f0;
+    font-family: 'Lato', sans-serif;
+    color: #99004d;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #cc0066;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2em;
+    color: #cc0066;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+a {
+    color: #ff3399;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="submit"],
+textarea,
+select {
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #ff99cc;
+    border-radius: 5px;
+    background-color: #fff0f5;
+    color: #660033;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #ff66b2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #e60073;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}

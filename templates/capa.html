@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CAPA Tracker | EH MetalWorks QMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>🛠 CAPA Tracker</h1>
+    <p><em>CAPA stands for <strong>Corrective and Preventive Action</strong>—a process used to identify, fix, and prevent issues that impact quality, compliance, or customer satisfaction.</em></p>
+    <p><a href="/capa/new">Log New CAPA</a></p>
+    <ul>
+        {% for c in capas %}
+        <li>
+            <strong>{{ c.issue }}</strong> — Owner: {{ c.owner }}<br>
+            Status: {{ c.status }}<br>
+            Root Cause: {{ c.root_cause }}<br>
+            Corrective Action: {{ c.corrective_action }}<br>
+            Preventive Action: {{ c.preventive_action }}<br>
+            Effectiveness Review: {{ c.effectiveness_review }}
+        </li>
+        {% else %}
+        <li>No CAPAs logged yet.</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/">← Back to Dashboard</a></p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Audit | EH MetalWorks QMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📝 Log a New Audit</h1>
+    <form method="POST">
+        <label>Area:</label><br>
+        <input type="text" name="area"><br><br>
+        <label>Auditor:</label><br>
+        <input type="text" name="auditor"><br><br>
+        <label>Findings:</label><br>
+        <textarea name="findings"></textarea><br><br>
+        <label>Corrective Action:</label><br>
+        <textarea name="corrective_action"></textarea><br><br>
+        <label>Status:</label><br>
+        <select name="status">
+            <option>Open</option>
+            <option>Closed</option>
+        </select><br><br>
+        <input type="submit" value="Submit Audit">
+    </form>
+    <p><a href="/audits">← Back to Audits</a></p>
+</body>
+</html>

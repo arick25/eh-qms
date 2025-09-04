@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New CAPA</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📝 Log a New CAPA</h1>
+    <form method="POST">
+        <label>Issue:</label><br>
+        <input type="text" name="issue"><br><br>
+
+        <label>Root Cause:</label><br>
+        <textarea name="root_cause"></textarea><br><br>
+
+        <label>Corrective Action:</label><br>
+        <textarea name="corrective_action"></textarea><br><br>
+
+        <label>Preventive Action:</label><br>
+        <textarea name="preventive_action"></textarea><br><br>
+
+        <label>Owner:</label><br>
+        <input type="text" name="owner"><br><br>
+
+        <label>Status:</label><br>
+        <select name="status">
+            <option>Open</option>
+            <option>Monitoring</option>
+            <option>Closed</option>
+        </select><br><br>
+
+        <label>Effectiveness Review:</label><br>
+        <textarea name="effectiveness_review"></textarea><br><br>
+
+        <input type="submit" value="Save CAPA">
+    </form>
+
+    <br>
+    <p><a href="/">← Back to Dashboard</a></p>
+</body>
+</html>

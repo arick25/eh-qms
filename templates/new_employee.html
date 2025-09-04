@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee | EH MetalWorks QMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>➕ Add New Employee</h1>
+    <form method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name"><br><br>
+
+        <label>Title:</label><br>
+        <input type="text" name="title"><br><br>
+
+        <label>Department:</label><br>
+        <input type="text" name="department"><br><br>
+
+        <label>Status:</label><br>
+        <select name="status">
+            <option>Active</option>
+            <option>On Leave</option>
+            <option>Terminated</option>
+        </select><br><br>
+
+        <label>Pay Rate:</label><br>
+        <input type="text" name="pay_rate"><br><br>
+
+        <label>Hire Date:</label><br>
+        <input type="date" name="hire_date"><br><br>
+
+        <label>Contact Info:</label><br>
+        <input type="text" name="contact"><br><br>
+
+        <input type="submit" value="Add Employee">
+    </form>
+    <p><a href="/employees">← Back to Employee List</a></p>
+</body>
+</html>

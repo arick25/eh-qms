@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KPI Report | EH MetalWorks QMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <img src="/static/ehlogo.png" alt="EH MetalWorks Logo" style="max-width: 300px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;">
+    
+    <h1>📊 KPI Dashboard</h1>
+
+    <h2>CAPA Summary</h2>
+    <ul>
+        <li>Total CAPAs: {{ capa_total }}</li>
+        <li>Open: {{ capa_open }}</li>
+        <li>Monitoring: {{ capa_monitoring }}</li>
+        <li>Closed: {{ capa_closed }}</li>
+    </ul>
+
+    <h2>Audit Summary</h2>
+    <ul>
+        <li>Total Audits: {{ audit_total }}</li>
+        <li>Open: {{ audit_open }}</li>
+        <li>Closed: {{ audit_closed }}</li>
+    </ul>
+
+    <h2>Document Summary</h2>
+    <ul>
+        <li>Total Documents Uploaded: {{ doc_total }}</li>
+    </ul>
+
+    <p><a href="/">← Back to Dashboard</a></p>
+</body>
+</html>
